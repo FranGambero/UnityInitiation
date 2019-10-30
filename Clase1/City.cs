@@ -117,7 +117,9 @@ public class City : MonoBehaviour
         if(population > 2)
         {
             population = population + population / 2;
-            for(int i=0; i<population-temporalPopu; i++)
+            int babies = population - temporalPopu;
+
+            for(int i=1; i<= babies; i++)
             {
                 Debug.Log("NACIMIENTO " + i);
             }
