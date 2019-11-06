@@ -4,38 +4,45 @@ using UnityEngine;
 
 public class GetMainCharacter : MonoBehaviour
 {
-    public Sprite bianca, alaska, dela, sharon;
-    private SpriteRenderer mySprite;
-    private readonly string selectedDrag = "Selected drag";
-
+    //public Sprite bianca, alaska, dela, sharon;
+    //private SpriteRenderer mySprite;
+    public GameObject myCharacter;
+    public GameObject biancaPre, alaskaPre, delaPre, sharonPre;
+    private readonly string selectedDrag = "Selected drag";        
 
     private void Awake()
     {
-        mySprite = this.GetComponent<SpriteRenderer>();
+        //mySprite = this.GetComponent<SpriteRenderer>();
+
+        /*biancaPre = this.GetComponent<GameObject>();
+        alaskaPre = this.GetComponent<GameObject>();
+        delaPre =   this.GetComponent<GameObject>();
+        sharonPre = this.GetComponent<GameObject>();  */
     }
 
     void Start()
     {
         int getCharacter = PlayerPrefs.GetInt(selectedDrag);
-        Debug.Log(getCharacter);
+        //Debug.Log("Tienes: " + getCharacter);
 
         switch (getCharacter)
         {
             case 1:
-                mySprite.sprite = bianca;
+                biancaPre.SetActive(true);                                         
                 break;
             case 2:
-                mySprite.sprite = alaska;
+                alaskaPre.SetActive(true);
                 break;
             case 3:
-                mySprite.sprite = dela;
+                delaPre.SetActive(true);
                 break;
             case 4:
-                mySprite.sprite = sharon;
+                sharonPre.SetActive(true);
                 break;
             default:
                 break;
         }
+                                   
                                 
     }
 
