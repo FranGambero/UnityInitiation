@@ -12,19 +12,23 @@ public class Init : MonoBehaviour
 
     private bool growing;
 
-    private void OnMouseDown() {
-        growing = true;
+    private void Start() {
+        
     }
 
-    private void OnMouseUp() {
-        growing = false;
-    }
+    //private void OnMouseDown() {
+    //    growing = true;
+    //}
 
-    private void Update() {
-        if (growing) {
-            transform.localScale += Vector3.one * Time.deltaTime;
-        }
-    }
+    //private void OnMouseUp() {
+    //    growing = false;
+    //}
+
+    //private void Update() {
+    //    if (growing) {
+    //        transform.localScale += Vector3.one * Time.deltaTime;
+    //    }
+    //}
 
     //private void Awake() {
     //    enabled = false;
